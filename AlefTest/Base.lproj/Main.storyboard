@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlefTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Персональные данные" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-mp-JiL">
+                                <rect key="frame" x="10" y="15" width="300" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaY-3B-ciu">
+                                <rect key="frame" x="10" y="45" width="300" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnA-NJ-sAE">
+                                        <rect key="frame" x="8" y="5" width="23.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-V6-U7D">
+                                        <rect key="frame" x="8" y="24" width="287" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="BHu-mi-bOZ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="iwA-V6-U7D" firstAttribute="leading" secondItem="ZaY-3B-ciu" secondAttribute="leading" constant="8" id="EMk-N1-jur"/>
+                                    <constraint firstItem="cnA-NJ-sAE" firstAttribute="top" secondItem="ZaY-3B-ciu" secondAttribute="top" constant="5" id="JuZ-Fs-H0P"/>
+                                    <constraint firstAttribute="trailing" secondItem="iwA-V6-U7D" secondAttribute="trailing" constant="5" id="Nuk-4o-pNR"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cnA-NJ-sAE" secondAttribute="trailing" constant="20" symbolic="YES" id="Q2f-Tt-Pd0"/>
+                                    <constraint firstItem="cnA-NJ-sAE" firstAttribute="leading" secondItem="ZaY-3B-ciu" secondAttribute="leading" constant="8" id="ZEq-dZ-yHR"/>
+                                    <constraint firstAttribute="bottom" secondItem="iwA-V6-U7D" secondAttribute="bottom" constant="5" id="cht-z6-5cT"/>
+                                    <constraint firstItem="iwA-V6-U7D" firstAttribute="top" secondItem="cnA-NJ-sAE" secondAttribute="bottom" constant="5" id="s5a-zy-tkC"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0nV-T3-fob" appends="YES" id="ARA-yt-4hb"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egc-6F-tFl">
+                                <rect key="frame" x="10" y="103" width="300" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возраст" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E39-tn-E9F">
+                                        <rect key="frame" x="8" y="5" width="47" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-V3-p7v">
+                                        <rect key="frame" x="8" y="24" width="287" height="19"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="tWb-LT-1KD"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="E39-tn-E9F" secondAttribute="trailing" constant="20" symbolic="YES" id="8Xw-lF-ikf"/>
+                                    <constraint firstItem="E39-tn-E9F" firstAttribute="top" secondItem="egc-6F-tFl" secondAttribute="top" constant="5" id="CMk-1d-Blf"/>
+                                    <constraint firstItem="E39-tn-E9F" firstAttribute="leading" secondItem="egc-6F-tFl" secondAttribute="leading" constant="8" id="PE0-7W-tYZ"/>
+                                    <constraint firstItem="hrf-V3-p7v" firstAttribute="leading" secondItem="egc-6F-tFl" secondAttribute="leading" constant="8" id="SzT-y1-UKp"/>
+                                    <constraint firstAttribute="trailing" secondItem="hrf-V3-p7v" secondAttribute="trailing" constant="5" id="Ukv-QF-QQR"/>
+                                    <constraint firstItem="hrf-V3-p7v" firstAttribute="top" secondItem="E39-tn-E9F" secondAttribute="bottom" constant="5" id="VLg-fa-0Bo"/>
+                                    <constraint firstAttribute="bottom" secondItem="hrf-V3-p7v" secondAttribute="bottom" constant="5" id="l31-rh-fqc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1wv-q8-lFE" appends="YES" id="MIk-9u-EsY"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Дети (макс. 5)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6d-Oy-Eya">
+                                <rect key="frame" x="10" y="174.5" width="110.5" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQd-cx-cGM">
+                                <rect key="frame" x="130.5" y="161" width="179.5" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" imagePlacement="leading" imagePadding="7" buttonSize="large">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="medium"/>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Добавить ребенка">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica-Light"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addChild" destination="BYZ-38-t0r" eventType="touchUpInside" id="JN9-yw-D2a"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorInsetReference="fromAutomaticInsets" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O9E-Fe-n5h">
+                                <rect key="frame" x="10" y="218" width="300" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FRj-dU-otE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Hqe-iS-J5f"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kQd-cx-cGM" secondAttribute="trailing" constant="10" id="2VM-j5-d1q"/>
+                            <constraint firstItem="O9E-Fe-n5h" firstAttribute="top" secondItem="kQd-cx-cGM" secondAttribute="bottom" constant="10" id="4yj-ZL-IJZ"/>
+                            <constraint firstItem="egc-6F-tFl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="A1L-tY-E8l"/>
+                            <constraint firstItem="K6d-Oy-Eya" firstAttribute="centerY" secondItem="kQd-cx-cGM" secondAttribute="centerY" id="D6C-ZM-QfF"/>
+                            <constraint firstItem="O9E-Fe-n5h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FyH-eT-4mP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZaY-3B-ciu" secondAttribute="trailing" constant="10" id="GuV-xG-6W8"/>
+                            <constraint firstItem="kQd-cx-cGM" firstAttribute="top" secondItem="egc-6F-tFl" secondAttribute="bottom" constant="10" id="H8T-RF-arm"/>
+                            <constraint firstItem="ZaY-3B-ciu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="LAA-dI-TBX"/>
+                            <constraint firstItem="egc-6F-tFl" firstAttribute="top" secondItem="ZaY-3B-ciu" secondAttribute="bottom" constant="10" id="MB5-bX-0CN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O9E-Fe-n5h" secondAttribute="trailing" constant="10" id="Pxz-iZ-aCN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nhT-mp-JiL" secondAttribute="trailing" constant="10" id="TN4-LF-3uX"/>
+                            <constraint firstItem="kQd-cx-cGM" firstAttribute="leading" secondItem="K6d-Oy-Eya" secondAttribute="trailing" constant="10" id="Trs-3k-Huv"/>
+                            <constraint firstItem="ZaY-3B-ciu" firstAttribute="top" secondItem="nhT-mp-JiL" secondAttribute="bottom" constant="10" id="X5n-nz-SkD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egc-6F-tFl" secondAttribute="trailing" constant="10" id="eLE-5G-283"/>
+                            <constraint firstItem="nhT-mp-JiL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="m2d-m1-cE9"/>
+                            <constraint firstItem="K6d-Oy-Eya" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ukW-EA-Gsh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O9E-Fe-n5h" secondAttribute="bottom" id="vRa-6e-WOd"/>
+                            <constraint firstItem="nhT-mp-JiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xVG-cY-74n"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="kQd-cx-cGM" id="GPq-vU-e9c"/>
+                        <outlet property="parentAgeField" destination="hrf-V3-p7v" id="bO7-r4-b45"/>
+                        <outlet property="parentNameField" destination="iwA-V6-U7D" id="XxQ-Vj-kRr"/>
+                        <outlet property="tableView" destination="O9E-Fe-n5h" id="tc3-Zc-Lok"/>
+                        <outlet property="viewAge" destination="egc-6F-tFl" id="qsm-2F-rcg"/>
+                        <outlet property="viewName" destination="ZaY-3B-ciu" id="yHH-C6-wzZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0nV-T3-fob"/>
+                <tapGestureRecognizer id="1wv-q8-lFE"/>
             </objects>
+            <point key="canvasLocation" x="18.75" y="65.492957746478879"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
